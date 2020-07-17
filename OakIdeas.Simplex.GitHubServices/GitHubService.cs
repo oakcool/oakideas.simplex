@@ -19,11 +19,13 @@ namespace OakIdeas.Simplex.GitHubServices
 
 
 			List<Article> articles = new List<Article>();
-			var client = new GitHubClient(new ProductHeaderValue("OakIdeas.Simplex"));
+			var client = new GitHubClient(new ProductHeaderValue("oakideas-simplex"));
 
-			RepositoryCollection repos = new RepositoryCollection();
-			repos.Add(repo);
-            var request = new SearchCodeRequest()
+			RepositoryCollection repos = new RepositoryCollection
+			{
+				repo
+			};
+			var request = new SearchCodeRequest()
             {				
 				Repos = repos,
                 // we may want to restrict the file based on file extension

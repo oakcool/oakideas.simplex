@@ -3,6 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>OakIdeas.Simplex.ConsoleApp</RootNamespace>
+    <AssemblyName>simplex</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
