@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OakIdeas.Simplex.Core\OakIdeas.Simplex.Core.csproj" />
+    <ProjectReference Include="..\OakIdeas.Simplex.GitHubServices\OakIdeas.Simplex.GitHubServices.csproj" />
+  </ItemGroup>
+
+</Project>

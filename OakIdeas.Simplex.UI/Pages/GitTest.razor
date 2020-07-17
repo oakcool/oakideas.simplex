@@ -1,0 +1,28 @@
+﻿@page "/GitTest"
+@using OakIdeas.Simplex.GitHubServices;
+
+<h3>GitTest</h3>
+<ul>
+    @foreach (var article in Articles)
+    {
+        <li><a>@article.URL</a></li>
+    }
+</ul>
+
+@code {
+    private List<OakIdeas.Simplex.Core.Article> Articles = new List<Core.Article>() ;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await FetchArticles();
+    }
+
+    private async Task FetchArticles()
+    {
+        GitHubService service = new GitHubService();
+
+        var articles = await service.GetArticles();
+
+        Articles.AddRange(articles);
+    }
+}
